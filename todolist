@@ -1,0 +1,15 @@
+1) Users and Permissions: Student, University Staff, Admins; isStudent, isStaff, isAdmin
+
+2) Models: User, University, Exams, University Offers with Time of Turs, Max Number of Students etc, Offer Application with Priorites
+
+3) System for Creating Offers with what Types of Exams matter
+
+4) System of Applying
+
+5) System of Turs
+
+6) System of Checking who got in
+
+7) System of creating a profile
+
+8) Messaging System
