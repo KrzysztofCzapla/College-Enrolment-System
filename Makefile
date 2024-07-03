@@ -1,7 +1,7 @@
 up-build:
 	docker compose build
-	docker compose exec backend python manage.py makemigrations
-	docker compose exec backend python manage.py migrate
+	docker compose run backend python manage.py makemigrations
+	docker compose run backend python manage.py migrate
 	docker compose up
 
 build:
