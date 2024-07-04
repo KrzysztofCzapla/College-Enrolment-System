@@ -1,6 +1,8 @@
-1) Users and Permissions: Student, University Staff, Admins; isStudent, isStaff, isAdmin
 
-2) Models: User, University, Exams, University Offers with Time of Turs, Max Number of Students etc, Offer Application with Priorites
+
+2) Models:  University, Exams, University Offers with Time of Turs, Max Number of Students etc, Offer Application with Priorites
+
+2.5) Code Formatter
 
 3) System for Creating Offers with what Types of Exams matter
 

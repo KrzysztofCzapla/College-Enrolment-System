@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     # apps:
     'common',
     'accounts',
+    'recruitment',
 ]
 
 # dj_rest_auth registration requirement
