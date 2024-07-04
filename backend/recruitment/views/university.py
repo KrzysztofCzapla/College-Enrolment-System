@@ -1,11 +1,18 @@
 from rest_framework import viewsets, permissions
 
+from accounts.permissions import IsStaff
+from recruitment.models import University
 from recruitment.serializers.university import UniversitySerializer
 
 
 class UniversityViewSet(viewsets.ModelViewSet):
     serializer_class = UniversitySerializer
-    permission_classes = [permissions.IsAuthenticated]
+
+    def get_permissions(self):
+        if self.action in ["create", "update", "partial_update", "delete"]:
+            return [IsStaff(), ]
+        else:
+            return [permissions.IsAuthenticated(), ]
 
     def get_queryset(self):
-        return self.request.user.universitys.all()
+        return University.objects.all()

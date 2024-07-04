@@ -7,3 +7,5 @@ class OfferStageSerializer(serializers.ModelSerializer):
     class Meta:
         model = OfferStage
         fields = ["id", "offer", "start_date", "end_date"]
+
+    

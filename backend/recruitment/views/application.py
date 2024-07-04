@@ -10,10 +10,10 @@ class ApplicationViewSet(viewsets.ModelViewSet):
     serializer_class = ApplicationSerializer
 
     def get_permissions(self):
-        if self.request.action in ["create", "update", "partial_update", "delete"]:
-            self.permission_classes = [IsStudent,]
+        if self.action in ["create", "update", "partial_update", "delete"]:
+            return [IsStudent(),]
         else:
-            self.permission_classes = [permissions.IsAuthenticated, ]
+            return [permissions.IsAuthenticated(),]
 
     def get_queryset(self):
         if self.request.user.account_type == AccountTypes.STUDENT:

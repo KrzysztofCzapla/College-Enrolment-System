@@ -13,7 +13,7 @@ class OfferStage(models.Model):
         ],
     )
 
-    offer = models.ForeignKey(Offer, on_delete=models.CASCADE)
+    offer = models.ForeignKey(Offer, on_delete=models.CASCADE, related_name="offer_stages")
 
     start_date = models.DateField()
 

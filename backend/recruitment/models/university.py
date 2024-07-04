@@ -5,7 +5,7 @@ from django.db import models
 class University(models.Model):
     name = models.CharField(max_length=255)
 
-    owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name="universities")
 
     address = models.CharField(max_length=255, blank=True)
 
