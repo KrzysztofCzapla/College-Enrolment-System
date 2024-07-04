@@ -12,4 +12,3 @@ class ExamTypes(models.TextChoices):
     PHILOSOPHY = "PHILOSOPHY", "Philosophy"
     COMPUTER_SCIENCE = "COMPUTER_SCIENCE", "Computer Science"
     HISTORY = "HISTORY", "History"
-
