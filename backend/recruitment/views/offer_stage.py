@@ -1,9 +1,10 @@
-from rest_framework import viewsets, permissions
-
+from rest_framework import viewsets, permissions, status
+from rest_framework.response import Response
 from accounts.enums import AccountTypes
 from accounts.permissions import IsStaff
 from recruitment.models import OfferStage
 from recruitment.serializers.offer_stage import OfferStageSerializer
+from recruitment.tasks import calculate_stage_results
 
 
 class OfferStageViewSet(viewsets.ModelViewSet):
@@ -20,3 +21,17 @@ class OfferStageViewSet(viewsets.ModelViewSet):
             return self.request.user.offer_stages.all()
         else:
             return OfferStage.objects.all()
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+
+        stage_end_date = serializer.validated_data.get("end_date")
+        stage_id = serializer.validated_data.get("id")
+
+        calculate_stage_results.apply_async(eta=stage_end_date, kwargs={'stage_id': stage_id})
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+

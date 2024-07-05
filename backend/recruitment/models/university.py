@@ -9,5 +9,7 @@ class University(models.Model):
 
     address = models.CharField(max_length=255, blank=True)
 
+    confirmed_students = models.ManyToManyField(get_user_model())
+
     def __str__(self):
         return self.name

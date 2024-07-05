@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
@@ -18,3 +19,5 @@ class Offer(models.Model):
     exams_requirements = ArrayField(
         models.JSONField(),
     )
+
+    confirmed_students = models.ManyToManyField(get_user_model())
