@@ -8,4 +8,4 @@ class OfferStageSerializer(serializers.ModelSerializer):
         model = OfferStage
         fields = ["id", "offer", "start_date", "end_date"]
 
-    
+
