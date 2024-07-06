@@ -1,0 +1,287 @@
+[
+    {
+        "model": "accounts.customuser",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": "2024-07-06T20:02:35Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "admin",
+            "last_name": "admin",
+            "email": "admin@admin.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:01:44Z",
+            "account_type": "ADMIN",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "krzysztof_student",
+            "first_name": "Krzysztof",
+            "last_name": "Czapla",
+            "email": "krzysztof@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:02:44Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student1",
+            "first_name": "John",
+            "last_name": "Doe",
+            "email": "john.doe1@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:10:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student2",
+            "first_name": "Jane",
+            "last_name": "Doe",
+            "email": "jane.doe2@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:11:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 6,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student3",
+            "first_name": "Alice",
+            "last_name": "Johnson",
+            "email": "alice.johnson3@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:12:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 7,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student4",
+            "first_name": "Bob",
+            "last_name": "Brown",
+            "email": "bob.brown4@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:13:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 8,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student5",
+            "first_name": "Charlie",
+            "last_name": "Clark",
+            "email": "charlie.clark5@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:14:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 9,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student6",
+            "first_name": "David",
+            "last_name": "Davis",
+            "email": "david.davis6@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:15:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 10,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student7",
+            "first_name": "Eve",
+            "last_name": "Evans",
+            "email": "eve.evans7@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:16:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 11,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student8",
+            "first_name": "Frank",
+            "last_name": "Franklin",
+            "email": "frank.franklin8@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:17:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 12,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student9",
+            "first_name": "Grace",
+            "last_name": "Green",
+            "email": "grace.green9@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:18:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 13,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "student10",
+            "first_name": "Hannah",
+            "last_name": "Hall",
+            "email": "hannah.hall10@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:19:00Z",
+            "account_type": "STUDENT",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 31,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "proffesor1",
+            "first_name": "Adam",
+            "last_name": "Smith",
+            "email": "adam@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:03:44Z",
+            "account_type": "UNIVERSITY STAFF",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 32,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "proffesor2",
+            "first_name": "Mike",
+            "last_name": "Smith",
+            "email": "mike@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:03:44Z",
+            "account_type": "UNIVERSITY STAFF",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 33,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$ig0hqe12kP6z5Ue3UB3gOK$BvXQcwK0zZV1jM/kDH/HUke45zCRDlzB+8brmQz6PaQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "proffesor3",
+            "first_name": "Barbra",
+            "last_name": "Smith",
+            "email": "barb@test.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-07-06T20:03:44Z",
+            "account_type": "UNIVERSITY STAFF",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

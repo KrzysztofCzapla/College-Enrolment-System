@@ -30,6 +30,12 @@ format:
 	docker compose exec backend black /backend
 	docker compose exec backend isort /backend
 
+fixtures:
+	docker compose exec backend python ./manage.py loaddata fixtures/users.json
+	docker compose exec backend python ./manage.py loaddata fixtures/universities.json
+	docker compose exec backend python ./manage.py loaddata fixtures/offers.json
+
+
 delete-docker-data:
 	docker rm $$(docker ps -a -q)
 	docker image rm $$(docker image ls -q)

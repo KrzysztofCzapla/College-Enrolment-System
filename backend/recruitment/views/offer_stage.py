@@ -4,7 +4,7 @@ from accounts.enums import AccountTypes
 from accounts.permissions import IsStaff
 from recruitment.models import OfferStage
 from recruitment.serializers.offer_stage import OfferStageSerializer
-from recruitment.tasks import calculate_stage_results
+from recruitment.tasks import calculate_stage_results, confirm_stage
 
 
 class OfferStageViewSet(viewsets.ModelViewSet):
@@ -29,9 +29,11 @@ class OfferStageViewSet(viewsets.ModelViewSet):
         headers = self.get_success_headers(serializer.data)
 
         stage_end_date = serializer.validated_data.get("end_date")
+        stage_confirmation_date = serializer.validated_data.get("end_date")
         stage_id = serializer.validated_data.get("id")
 
         calculate_stage_results.apply_async(eta=stage_end_date, kwargs={'stage_id': stage_id})
+        confirm_stage.apply_async(eta=stage_confirmation_date, kwargs={'stage_id': stage_id})
 
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 

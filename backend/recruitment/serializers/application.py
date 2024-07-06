@@ -6,4 +6,5 @@ from recruitment.models import Application
 class ApplicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Application
-        fields = ["id", "student", "university", "offer", "offer_stage", "priority", "exams", "status"]
+        fields = ["id", "student", "university", "offer", "offer_stage", "priority", "status"]
+        read_only_fields = ["status",]

@@ -19,9 +19,10 @@ class CustomDateTimeField(serializers.DateTimeField):
 class OfferStageSerializer(serializers.ModelSerializer):
     start_date = CustomDateTimeField()
     end_date = CustomDateTimeField()
+    confirmation_date = CustomDateTimeField()
 
     class Meta:
         model = OfferStage
-        fields = ["id", "offer", "start_date", "end_date"]
+        fields = ["id", "offer", "start_date", "end_date", "confirmation_date"]
 
 

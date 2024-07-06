@@ -18,6 +18,6 @@ class ApplicationStatuses(models.TextChoices):
     ACCEPTED = "ACCEPTED", "Accepted" # Student got in
     CONFIRMED = "CONFIRMED", "Confirmed" # Student confirmed that he is sure
     REJECTED = "REJECTED", "Rejected" # Student didnt get in
-    RESIGNED = "RESIGNED", "Resigned" # Student resigned or accepted another offer
+    RESIGNED = "RESIGNED", "Resigned" # Student resigned or accepted another offer or didnt confirmed in time
 
 

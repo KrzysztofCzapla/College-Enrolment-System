@@ -18,3 +18,5 @@ class OfferStage(models.Model):
     start_date = models.DateTimeField()
 
     end_date = models.DateTimeField()
+
+    confirmation_date = models.DateTimeField()

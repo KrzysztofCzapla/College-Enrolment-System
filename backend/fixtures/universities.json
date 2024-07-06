@@ -1,0 +1,32 @@
+[
+    {
+    "model": "recruitment.university",
+    "pk": 1,
+    "fields": {
+        "name": "University 1",
+        "owner": 31,
+        "address": "Warsaw",
+        "confirmed_students": []
+    }
+},
+    {
+    "model": "recruitment.university",
+    "pk": 2,
+    "fields": {
+        "name": "University 2",
+        "owner": 32,
+        "address": "Berlin",
+        "confirmed_students": []
+    }
+},
+    {
+    "model": "recruitment.university",
+    "pk": 3,
+    "fields": {
+        "name": "University 3",
+        "owner": 33,
+        "address": "Paris",
+        "confirmed_students": []
+    }
+}
+]

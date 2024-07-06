@@ -1,0 +1,41 @@
+[
+    {
+        "model": "recruitment.offer",
+        "pk": 1,
+        "fields": {
+            "title": "Computer Science",
+            "description": "Major in CS",
+            "university": 1,
+            "max_number_of_students": 5,
+            "exams_requirements": "[{\"exams\": [\"MATH\", \"PHYSICS\"], \"weight\": 2},{\"exams\": [\"COMPUTER_SCIENCE\", \"ENGLISH\"], \"weight\": 1.3}]",
+            "is_open": true,
+            "confirmed_students": []
+        }
+    },
+    {
+        "model": "recruitment.offer",
+        "pk": 2,
+        "fields": {
+            "title": "Biology",
+            "description": "Biology",
+            "university": 2,
+            "max_number_of_students": 5,
+            "exams_requirements": "[{\"exams\": [\"BIOLOGY\"], \"weight\": 2.5},{\"exams\": [\"ENGLISH\"], \"weight\": 1.2}]",
+            "is_open": true,
+            "confirmed_students": []
+        }
+    },
+    {
+        "model": "recruitment.offer",
+        "pk": 3,
+        "fields": {
+            "title": "Geography",
+            "description": "Biology",
+            "university": 3,
+            "max_number_of_students": 5,
+            "exams_requirements": "[{\"exams\": [\"GEOGRAPHY\", \"BIOLOGY\"], \"weight\": 2},{\"exams\": [\"ENGLISH\", \"CHEMISTRY\"], \"weight\": 1.5}]",
+            "is_open": true,
+            "confirmed_students": []
+        }
+    }
+]

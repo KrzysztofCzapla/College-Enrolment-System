@@ -21,6 +21,6 @@ class Offer(models.Model):
         models.JSONField(),
     )
 
-    confirmed_students = models.ManyToManyField(get_user_model())
+    confirmed_students = models.ManyToManyField(get_user_model(), blank=True)
 
     is_open = models.BooleanField(default=True)

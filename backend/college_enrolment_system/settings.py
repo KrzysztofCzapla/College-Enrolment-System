@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "dj_rest_auth.registration",
     "drf_yasg",
-    'django_celery_results',
+    "django_celery_beat",
     # apps:
     "common",
     "accounts",
