@@ -13,11 +13,13 @@ class ExamTypes(models.TextChoices):
     COMPUTER_SCIENCE = "COMPUTER_SCIENCE", "Computer Science"
     HISTORY = "HISTORY", "History"
 
+
 class ApplicationStatuses(models.TextChoices):
     PENDING = "PENDING", "Pending"
-    ACCEPTED = "ACCEPTED", "Accepted" # Student got in
-    CONFIRMED = "CONFIRMED", "Confirmed" # Student confirmed that he is sure
-    REJECTED = "REJECTED", "Rejected" # Student didnt get in
-    RESIGNED = "RESIGNED", "Resigned" # Student resigned or accepted another offer or didnt confirmed in time
-
-
+    ACCEPTED = "ACCEPTED", "Accepted"  # Student got in
+    CONFIRMED = "CONFIRMED", "Confirmed"  # Student confirmed that he is sure
+    REJECTED = "REJECTED", "Rejected"  # Student didnt get in
+    RESIGNED = (
+        "RESIGNED",
+        "Resigned",
+    )  # Student resigned or accepted another offer or didnt confirmed in time

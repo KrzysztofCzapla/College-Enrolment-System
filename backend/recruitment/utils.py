@@ -17,10 +17,16 @@ def calculate_application_points(student: get_user_model(), application: Applica
 
     for exams_tier in offer.exams_requirements:
         # Check if Student has at least one of the required exam for the tier
-        if highest_exam_score := exams.filter(name__in=exams_tier["exams"]).order_by("-score").values_list("score", flat=True):
+        if (
+            highest_exam_score := exams.filter(name__in=exams_tier["exams"])
+            .order_by("-score")
+            .values_list("score", flat=True)
+        ):
             application_points += highest_exam_score[0] * exams_tier["weight"]
         else:
-            change_application_status(application=application, status=ApplicationStatuses.REJECTED)
+            change_application_status(
+                application=application, status=ApplicationStatuses.REJECTED
+            )
             return
 
     application.points = application_points

@@ -1,5 +1,6 @@
-from rest_framework import viewsets, permissions, status
+from rest_framework import permissions, status, viewsets
 from rest_framework.response import Response
+
 from accounts.enums import AccountTypes
 from accounts.permissions import IsStaff
 from recruitment.models import OfferStage
@@ -12,9 +13,13 @@ class OfferStageViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self):
         if self.action in ["create", "update", "partial_update", "delete"]:
-            return [IsStaff(), ]
+            return [
+                IsStaff(),
+            ]
         else:
-            return [permissions.IsAuthenticated(), ]
+            return [
+                permissions.IsAuthenticated(),
+            ]
 
     def get_queryset(self):
         if self.request.user.account_type != AccountTypes.ADMIN:
@@ -28,12 +33,17 @@ class OfferStageViewSet(viewsets.ModelViewSet):
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
 
-        stage_end_date = serializer.validated_data.get("end_date")
-        stage_confirmation_date = serializer.validated_data.get("end_date")
-        stage_id = serializer.validated_data.get("id")
+        stage_end_date = serializer.instance.end_date
+        stage_confirmation_date = serializer.instance.end_date
+        stage_id = serializer.instance.id
 
-        calculate_stage_results.apply_async(eta=stage_end_date, kwargs={'stage_id': stage_id})
-        confirm_stage.apply_async(eta=stage_confirmation_date, kwargs={'stage_id': stage_id})
+        calculate_stage_results.apply_async(
+            eta=stage_end_date, kwargs={"stage_id": stage_id}
+        )
+        confirm_stage.apply_async(
+            eta=stage_confirmation_date, kwargs={"stage_id": stage_id}
+        )
 
-        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
-
+        return Response(
+            serializer.data, status=status.HTTP_201_CREATED, headers=headers
+        )

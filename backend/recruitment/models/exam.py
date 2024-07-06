@@ -8,7 +8,9 @@ from recruitment.enums import ExamTypes
 class Exam(models.Model):
     name = models.CharField(max_length=255, choices=ExamTypes, default=ExamTypes.MATH)
 
-    owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name="exams")
+    owner = models.ForeignKey(
+        get_user_model(), on_delete=models.CASCADE, related_name="exams"
+    )
 
     score = models.IntegerField(
         default=0, validators=[MaxValueValidator(100), MinValueValidator(0)]

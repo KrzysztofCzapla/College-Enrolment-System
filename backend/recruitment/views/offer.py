@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions
+from rest_framework import permissions, viewsets
 
 from accounts.enums import AccountTypes
 from accounts.permissions import IsStaff
@@ -11,9 +11,13 @@ class OfferViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self):
         if self.action in ["create", "update", "partial_update", "delete"]:
-            return [IsStaff(), ]
+            return [
+                IsStaff(),
+            ]
         else:
-            return [permissions.IsAuthenticated(), ]
+            return [
+                permissions.IsAuthenticated(),
+            ]
 
     def get_queryset(self):
         if self.request.user.account_type != AccountTypes.ADMIN:

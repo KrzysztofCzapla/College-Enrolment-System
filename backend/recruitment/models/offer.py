@@ -10,7 +10,9 @@ class Offer(models.Model):
 
     description = models.CharField(max_length=5000, blank=True)
 
-    university = models.ForeignKey(University, on_delete=models.CASCADE, related_name="offers")
+    university = models.ForeignKey(
+        University, on_delete=models.CASCADE, related_name="offers"
+    )
 
     max_number_of_students = models.IntegerField(default=100)
 

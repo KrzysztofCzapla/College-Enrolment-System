@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions
+from rest_framework import permissions, viewsets
 
 from accounts.permissions import IsStaff
 from recruitment.models import University
@@ -10,9 +10,13 @@ class UniversityViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self):
         if self.action in ["create", "update", "partial_update", "delete"]:
-            return [IsStaff(), ]
+            return [
+                IsStaff(),
+            ]
         else:
-            return [permissions.IsAuthenticated(), ]
+            return [
+                permissions.IsAuthenticated(),
+            ]
 
     def get_queryset(self):
         return University.objects.all()

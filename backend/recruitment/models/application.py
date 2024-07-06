@@ -7,13 +7,21 @@ from recruitment.models import Exam, Offer, OfferStage, University
 
 
 class Application(models.Model):
-    student = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name="applications")
+    student = models.ForeignKey(
+        get_user_model(), on_delete=models.CASCADE, related_name="applications"
+    )
 
-    university = models.ForeignKey(University, on_delete=models.CASCADE, related_name="applications")
+    university = models.ForeignKey(
+        University, on_delete=models.CASCADE, related_name="applications"
+    )
 
-    offer = models.ForeignKey(Offer, on_delete=models.CASCADE, related_name="applications")
+    offer = models.ForeignKey(
+        Offer, on_delete=models.CASCADE, related_name="applications"
+    )
 
-    offer_stage = models.ForeignKey(OfferStage, on_delete=models.CASCADE, related_name="applications")
+    offer_stage = models.ForeignKey(
+        OfferStage, on_delete=models.CASCADE, related_name="applications"
+    )
 
     priority = models.IntegerField(
         default=1,
@@ -22,8 +30,8 @@ class Application(models.Model):
         ],
     )
 
-    status = models.CharField(max_length=255, choices=ApplicationStatuses, default=ApplicationStatuses.PENDING)
-
-    points = models.IntegerField(
-        default=0
+    status = models.CharField(
+        max_length=255, choices=ApplicationStatuses, default=ApplicationStatuses.PENDING
     )
+
+    points = models.IntegerField(default=0)

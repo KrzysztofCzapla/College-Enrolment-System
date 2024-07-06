@@ -157,7 +157,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-DATETIME_FORMAT = '%Y-%m-%d %H:%M'
+DATETIME_FORMAT = "%Y-%m-%d %H:%M"
 USE_L10N = False
 
 # Static files (CSS, JavaScript, Images)
@@ -171,12 +171,12 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # CELERY
-CELERY_RESULT_BACKEND = 'django-db'
-CELERY_CACHE_BACKEND = 'default'
+CELERY_RESULT_BACKEND = "django-db"
+CELERY_CACHE_BACKEND = "default"
 
 CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'my_cache_table',
+    "default": {
+        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+        "LOCATION": "my_cache_table",
     }
 }

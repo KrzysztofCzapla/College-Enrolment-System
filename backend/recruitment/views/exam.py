@@ -1,9 +1,9 @@
-from rest_framework import viewsets, permissions
+from rest_framework import permissions, viewsets
 
-from recruitment.models import Exam
-from recruitment.serializers.exam import ExamSerializer
 from accounts.enums import AccountTypes
 from accounts.permissions import IsStudent
+from recruitment.models import Exam
+from recruitment.serializers.exam import ExamSerializer
 
 
 class ExamViewSet(viewsets.ModelViewSet):
@@ -11,9 +11,13 @@ class ExamViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self):
         if self.action in ["create", "update", "partial_update", "delete"]:
-            return [IsStudent(), ]
+            return [
+                IsStudent(),
+            ]
         else:
-            return [permissions.IsAuthenticated(), ]
+            return [
+                permissions.IsAuthenticated(),
+            ]
 
     def get_queryset(self):
         if self.request.user.account_type != AccountTypes.ADMIN:
