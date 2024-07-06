@@ -4,6 +4,10 @@ from accounts.enums import AccountTypes
 from accounts.permissions import IsStudent
 from recruitment.models import Application
 from recruitment.serializers.application import ApplicationSerializer
+from rest_framework import viewsets, permissions, status
+from rest_framework.response import Response
+
+from recruitment.utils import calculate_application_points
 
 
 class ApplicationViewSet(viewsets.ModelViewSet):
@@ -20,3 +24,13 @@ class ApplicationViewSet(viewsets.ModelViewSet):
             return self.request.user.applications.all()
         else:
             return Application.objects.all()
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+
+        calculate_application_points(student=serializer.instance.student, application=serializer.instance)
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)

@@ -22,6 +22,8 @@ class Application(models.Model):
         ],
     )
 
-    exams = models.ManyToManyField(Exam)
-
     status = models.CharField(max_length=255, choices=ApplicationStatuses, default=ApplicationStatuses.PENDING)
+
+    points = models.IntegerField(
+        default=0
+    )

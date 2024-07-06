@@ -29,3 +29,8 @@ superuser:
 format:
 	docker compose exec backend black /backend
 	docker compose exec backend isort /backend
+
+delete-docker-data:
+	docker rm $$(docker ps -a -q)
+	docker image rm $$(docker image ls -q)
+	docker volume rm $$(docker volume ls -q)
