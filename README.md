@@ -1,4 +1,4 @@
-# Full-stack College Enrolment System App
+# Backend-only College Enrolment System App
 
 ## Features
 
@@ -18,8 +18,6 @@
 
 ## Tech Stack
 
-### Fullstack
-
 ### Backend
 Python, Django, Django Rest Framework, Celery, Redis, Poetry
 
@@ -31,9 +29,10 @@ Docker, Docker Compose, Bash
 
 ## Install on Linux/WSL
 ### 1. Copy Repository
-### 2. install docker and docker compose (curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)
-### 3. get into main repository folder and type "make up-build"
-### 4. If you wish you can load fixtures with users, universities, and offers with "make fixtures"
-
-## Usage
-### log in as admin: username: admin, password: admin
+### 2. install docker and docker compose:
+```curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh)```
+### 3. get into main repository folder and type:
+```make up-build```
+### 4. If you wish you can load fixtures with users, universities, and offers with 
+```make fixtures```
+### 5. To test the repo its probably the best to use both admin panel and swagger documentation
