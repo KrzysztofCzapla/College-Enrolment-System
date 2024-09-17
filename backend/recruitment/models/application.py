@@ -3,7 +3,7 @@ from django.core.validators import MinValueValidator
 from django.db import models
 
 from recruitment.enums import ApplicationStatuses
-from recruitment.models import Exam, Offer, OfferStage, University
+from recruitment.models import Offer, OfferStage, University
 
 
 class Application(models.Model):
