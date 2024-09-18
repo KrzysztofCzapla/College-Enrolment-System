@@ -23,6 +23,9 @@ bash:
 shell:
 	docker compose exec backend python ./manage.py shell
 
+tests:
+	docker compose exec backend pytest
+
 superuser:
 	docker compose exec backend python ./manage.py createsuperuser
 
