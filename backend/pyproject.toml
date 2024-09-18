@@ -18,6 +18,10 @@ black = "^24.4.2"
 isort = "^5.13.2"
 celery = {extras = ["redis"], version = "^5.4.0"}
 django-celery-beat = "^2.6.0"
+pytest = "^8.3.3"
+pytest-django = "^4.9.0"
+pytest-cov = "^5.0.0"
+factory-boy = "^3.3.1"
 
 
 [build-system]
