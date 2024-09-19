@@ -54,7 +54,12 @@ INSTALLED_APPS = [
     "common",
     "accounts",
     "recruitment",
+    "graphene_django"
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'recruitment.schema.schema',
+}
 
 # dj_rest_auth registration requirement
 SITE_ID = 1
